@@ -7,8 +7,7 @@
  int main()
  {
     int arr[10];
-    int sorted[10] = {0};
-    int counter=0;
+    int j=0;
     int i;
     int rand_num;
 
@@ -32,16 +31,19 @@
     {
         if(arr[i] != 0)
         {
-            sorted[counter] = arr[i];
-            counter ++;
+            arr[j] = arr[i];
+            j ++; 
         }
     }
+
+    for(i=j; i<10; i++)
+        arr[i] = 0;
 
     cout<<"\n\n";
 
     cout<<"The Organized Array is: \n\n";
     for(i=0; i<10; i++)
-        cout<<sorted[i]<<" ";
+        cout<<arr[i]<<" ";
 
     cout<<"\n\n";
 
